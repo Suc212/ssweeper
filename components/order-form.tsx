@@ -67,6 +67,27 @@ export function OrderForm() {
         created_at: serverTimestamp(),
       })
 
+      const emailResponse = await fetch("/api/send-order-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          customer_name: data.customerName,
+          customer_email: data.customerEmail,
+          customer_phone: data.customerPhone,
+          customer_whatsapp: data.customerWhatsapp,
+          customer_address: data.customerAddress,
+          num_units: numUnits,
+          total_price: totalPrice,
+        }),
+      })
+
+      if (!emailResponse.ok) {
+        const emailResult = await emailResponse.json().catch(() => null)
+        throw new Error(emailResult?.error || "Failed to send order email")
+      }
+
       setSubmitSuccess(true)
       reset()
       setTimeout(() => {
