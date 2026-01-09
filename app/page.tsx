@@ -81,7 +81,7 @@ export default function HomePage() {
             {/* Right Visual */}
             <div className="relative h-96 md:h-full min-h-96 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl flex items-center justify-center overflow-hidden">
               <img
-                src="/smart-robot-sweeper-in-modern-home.jpg"
+                src="\H6769346b1bfe407e9d95cc0d0af3184db.jpg_960x960q80.jpg"
                 alt="SweepBot Pro Robot Sweeper"
                 className="w-full h-full object-cover rounded-2xl"
               />
@@ -111,21 +111,21 @@ export default function HomePage() {
                 title: "Smart Mapping & Navigation",
                 description:
                   "LiDAR technology creates detailed room maps, ensuring 100% coverage with intelligent path planning that learns your home layout.",
-                image: "/robot-mapping-lidar-technology.jpg",
+                image: "\H6caa195abdcf4a5ea08c40c42b0d3dbfa.jpg_720x720q50.jpg",
               },
               {
                 icon: BatteryFull,
                 title: "Extended Battery & Auto-Return",
                 description:
                   "Up to 90 minutes of cleaning on a single charge. Automatically returns to dock when battery runs low, resuming where it left off.",
-                image: "/robot-battery-charging-dock.jpg",
+                image: "/H363406a4c99943718ba44773575494f3F.jpg",
               },
               {
                 icon: Wind,
                 title: "Powerful Yet Eco-Friendly",
                 description:
                   "4000 Pa suction power cleans deeply while using 80% less energy than traditional vacuums. Perfect for the environmentally conscious.",
-                image: "/eco-friendly-green-technology-sustainable.jpg",
+                image: "/Hb07711e7b6f94245b20792dac9f1a36ea.jpg_720x720q50.jpg",
               },
             ].map((feature, idx) => {
               const Icon = feature.icon
