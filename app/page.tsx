@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { Check, Zap, Wind, BatteryFull, TrendingUp } from "lucide-react"
+import { Check, Zap, Wind, BatteryFull, TrendingUp, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { OrderForm } from "@/components/order-form"
@@ -144,6 +144,55 @@ export default function HomePage() {
                 </Card>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-accent uppercase tracking-wider mb-2">Customer Reviews</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">
+              Trusted by Homes Across Ghana
+            </h2>
+            <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+              Real feedback from Ghanaian families and professionals who made cleaning effortless.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: "Ama Owusu",
+                location: "East Legon, Accra",
+                quote:
+                  "The SweepBot handles my tiled living room perfectly. I set it in the morning and come back to a clean floor every day.",
+              },
+              {
+                name: "Kwame Mensah",
+                location: "Adum, Kumasi",
+                quote:
+                  "Our office uses it twice a day. it does a very good job. Very solid purchase.",
+              },
+              {
+                name: "Esi Boateng",
+                location: "Community 12, Tema",
+                quote:
+                  "I love how quiet it is. Even with two kids at home, it cleans under the sofa and avoids toys without getting stuck.",
+              },
+            ].map((review) => (
+              <Card key={review.name} className="p-6 border border-border hover:shadow-lg transition-shadow">
+                <div className="flex items-center gap-1 text-primary mb-4">
+                  {Array.from({ length: 5 }).map((_, idx) => (
+                    <Star key={idx} className="w-4 h-4 fill-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">"{review.quote}"</p>
+                <div className="text-sm font-semibold text-foreground">{review.name}</div>
+                <div className="text-xs text-muted-foreground">{review.location}</div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
