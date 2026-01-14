@@ -65,7 +65,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="w-5 h-5 text-primary" />
-                  <span>1-Year Warranty</span>
+                  <span>Support</span>
                 </div>
               </div>
 
@@ -245,7 +245,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>1-Year warranty & support</span>
+                    <span>Support</span>
                   </li>
                 </ul>
                 <Button

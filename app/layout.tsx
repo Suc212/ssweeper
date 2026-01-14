@@ -11,7 +11,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "SweepBot Pro | AI-Powered Smart Robot Sweeper",
   description:
-    "Clean floors with zero effort. SweepBot Pro uses advanced AI to map your home and deliver spotless cleaning 24/7. Free delivery in Accra, 1-year warranty.",
+    "Clean floors with zero effort. SweepBot Pro uses advanced AI to map your home and deliver spotless cleaning 24/7. Free delivery in Accra.",
   generator: "v0.app",
   icons: {
     icon: [
